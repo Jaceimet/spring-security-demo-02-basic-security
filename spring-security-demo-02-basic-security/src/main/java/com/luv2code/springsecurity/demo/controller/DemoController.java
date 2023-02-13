@@ -8,9 +8,9 @@ public class DemoController {
 
 	@GetMapping("/")
 	public String showHome() {
-		
+
 		return "home";
 	}
-	
-	
+
+
 }

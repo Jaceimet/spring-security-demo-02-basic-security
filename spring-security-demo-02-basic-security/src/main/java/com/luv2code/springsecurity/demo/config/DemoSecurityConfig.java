@@ -15,16 +15,16 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
 		// add our users for in memory authentication
-		
+
 		UserBuilder users = User.withDefaultPasswordEncoder();
-		
+
 		auth.inMemoryAuthentication()
 			.withUser(User.withUsername("john").password("test123").roles("EMPLOYEE"))
 			.withUser(User.withUsername("mary").password("test123").roles("MANAGER"))
 			.withUser(User.withUsername("susan").password("test123").roles("ADMIN"));
-		
+
 	}
 
-	
-	
+
+
 }
